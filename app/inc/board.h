@@ -64,10 +64,21 @@ extern "C" {
 #define BTN_A_PRESSED	GPIO_PIN_RESET
 #define BTN_A_HOVER		GPIO_PIN_SET
 
+
+#define BTN_B_PIN		GPIO_INPUT_D4_Pin
+#define BTN_B_PORT		GPIO_INPUT_D4_GPIO_Port
+#define BTN_B_PRESSED	GPIO_PIN_RESET
+#define BTN_B_HOVER		GPIO_PIN_SET
+
 #define LED_A_PIN		LD2_Pin
 #define LED_A_PORT		LD2_GPIO_Port
 #define LED_A_ON		GPIO_PIN_SET
 #define LED_A_OFF		GPIO_PIN_RESET
+
+#define LED_B_PIN		GPIO_OUTPUT_D5_Pin
+#define LED_B_PORT		GPIO_OUTPUT_D5_GPIO_Port
+#define LED_B_ON		GPIO_PIN_SET
+#define LED_B_OFF		GPIO_PIN_RESET
 
 #endif/* STM32 Nucleo Boards - 144 Pins */
 
@@ -78,10 +89,21 @@ extern "C" {
 #define BTN_A_PRESSED	GPIO_PIN_SET
 #define BTN_A_HOVER		GPIO_PIN_RESET
 
+#define BTN_B_PIN		GPIO_INPUT_D4_Pin
+#define BTN_B_PORT		GPIO_INPUT_D4_GPIO_Port
+#define BTN_B_PRESSED	GPIO_PIN_RESET
+#define BTN_B_HOVER		GPIO_PIN_SET
+
+
 #define LED_A_PIN		LD1_Pin
 #define LED_A_PORT		LD1_GPIO_Port
 #define LED_A_ON		GPIO_PIN_SET
 #define LED_A_OFF		GPIO_PIN_RESET
+
+#define LED_B_PIN		GPIO_OUTPUT_D5_Pin
+#define LED_B_PORT		GPIO_OUTPUT_D5_GPIO_Port
+#define LED_B_ON		GPIO_PIN_SET
+#define LED_B_OFF		GPIO_PIN_RESET
 
 #endif
 
@@ -93,10 +115,21 @@ extern "C" {
 #define BTN_A_PRESSED	GPIO_PIN_SET
 #define BTN_A_HOVER		GPIO_PIN_RESET
 
+#define BTN_B_PIN		GPIO_INPUT_D4_Pin
+#define BTN_B_PORT		GPIO_INPUT_D4_GPIO_Port
+#define BTN_B_PRESSED	GPIO_PIN_RESET
+#define BTN_B_HOVER		GPIO_PIN_SET
+
+
 #define LED_A_PIN		LD3_Pin
 #define LED_A_PORT		LD3_GPIO_Port
 #define LED_A_ON		GPIO_PIN_SET
 #define LED_A_OFF		GPIO_PIN_RESET
+
+#define LED_B_PIN		GPIO_OUTPUT_D5_Pin
+#define LED_B_PORT		GPIO_OUTPUT_D5_GPIO_Port
+#define LED_B_ON		GPIO_PIN_SET
+#define LED_B_OFF		GPIO_PIN_RESET
 
 #endif
 
