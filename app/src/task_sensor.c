@@ -64,7 +64,7 @@ const task_sensor_cfg_t task_sensor_cfg_list[] = {
 	{ID_BTN_A,  BTN_A_PORT,  BTN_A_PIN,  BTN_A_PRESSED, DEL_BTN_XX_MAX,
 	 EV_SYS_XX_IDLE,  EV_SYS_XX_ACTIVE},
 	{ID_BTN_B, BTN_B_PORT , BTN_B_PIN ,  BTN_B_PRESSED, DEL_BTN_XX_MAX,
-		 	 EV_SYS_XX_IDLE,  EV_SYS_XX_ACTIVE}
+			EV_SYS_XX_IDLE,  EV_SYS_XX_ACTIVE}
 };
 
 #define SENSOR_CFG_QTY	(sizeof(task_sensor_cfg_list)/sizeof(task_sensor_cfg_t))

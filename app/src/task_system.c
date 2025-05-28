@@ -128,6 +128,7 @@ void task_system_update(void *parameters)
     }
     __asm("CPSIE i");	/* enable interrupts*/
 
+
     while (b_time_update_required)
     {
 		/* Protect shared resource (g_task_system_tick) */
@@ -152,14 +153,16 @@ void task_system_update(void *parameters)
 			p_task_system_dta->event = get_event_task_system();
 		}
 
+
 		switch (p_task_system_dta->state)
 		{
+
 			case ST_SYS_XX_IDLE:
 
 				if ((true == p_task_system_dta->flag) && (EV_SYS_XX_ACTIVE == p_task_system_dta->event))
 				{
 					p_task_system_dta->flag = false;
-					put_event_task_actuator(EV_LED_XX_ON, ID_LED_A);
+					put_event_task_actuator(EV_LED_XX_ON, ID_LED_B);
 					p_task_system_dta->state = ST_SYS_XX_ACTIVE;
 				}
 
@@ -170,12 +173,40 @@ void task_system_update(void *parameters)
 				if ((true == p_task_system_dta->flag) && (EV_SYS_XX_IDLE == p_task_system_dta->event))
 				{
 					p_task_system_dta->flag = false;
-					put_event_task_actuator(EV_LED_XX_OFF, ID_LED_A);
+					put_event_task_actuator(EV_LED_XX_OFF, ID_LED_B );
 					p_task_system_dta->state = ST_SYS_XX_IDLE;
 				}
 
 				break;
 
+			case ST_SYS_LEDB_IDLE:
+
+						if ((true == p_task_system_dta->flag) && (EV_SYS_LEDB_ACTIVE == p_task_system_dta->event))
+						{
+							p_task_system_dta->flag = false;
+							put_event_task_actuator(EV_LED_XX_ON, ID_LED_B);
+							p_task_system_dta->state = ST_SYS_LEDB_ACTIVE;
+						}
+
+						break;
+
+					case ST_SYS_LEDB_ACTIVE:
+
+						if ((true == p_task_system_dta->flag) && (EV_SYS_LEDB_IDLE == p_task_system_dta->event))
+						{
+							p_task_system_dta->flag = false;
+							put_event_task_actuator(EV_LED_XX_OFF, ID_LED_B );
+							p_task_system_dta->state = ST_SYS_LEDB_IDLE;
+						}
+
+						break;/*
+
+
+
+
+
+
+*/
 			default:
 
 				break;
